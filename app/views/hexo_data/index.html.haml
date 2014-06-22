@@ -1,0 +1,15 @@
+%h1
+  = @user.capitalize + "'s Records"
+%hr
+- @records.each do |record|
+  .well
+    .row
+      .col-md-12.col-xs-12
+        %p
+          = link_to "Record # #{record["id"]}", record_path(:user => @user, :record_id => record["id"], :end_time => record["end"])
+        %p
+          From:
+          = Time.at(record["start"]/256).strftime("%Y-%B-%d %l:%M %p")
+        %p
+          To:
+          = Time.at(record["end"]/256).strftime("%Y-%B-%d %l:%M %p")

@@ -1,0 +1,19 @@
+= javascript_tag do
+  window.graphDataHr = '#{@plots_hr.to_json}';
+  window.graphDataBr = '#{@plots_br.to_json}';
+  window.graphDataCa = '#{@plots_ca.to_json}';
+
+%h3
+  Record # 
+  = "#{@record_id}"
+  for
+  = "#{@user.capitalize}"
+%hr
+.container
+  .col-md-12.col-sm-12.col-xs-12
+    .chart_hr
+  .col-md-12.col-sm-12.col-xs-12
+    .chart_br
+  .col-md-12.col-sm-12.col-xs-12
+    .chart_ca
+  

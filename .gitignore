@@ -9,7 +9,6 @@
 
 /config/environment_variables.yml
 /config/database.yml
-/config/secrets.yml
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

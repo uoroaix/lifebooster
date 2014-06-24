@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Lifebooster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -48,12 +49,16 @@
 </nav>
 
 <% if flash[:notice] %>
-  <div class="alert alert-success">
-    <%= flash[:notice] %>
+  <div class="container">
+    <div class="alert alert-success">
+      <%= flash[:notice] %>
+    </div>
   </div>
 <% elsif flash[:alert] %>
-  <div class="alert alert-danger">
-    <%= flash[:alert] %>
+  <div class="container">
+    <div class="alert alert-danger">
+      <%= flash[:alert] %>
+    </div>
   </div>
 <% end %>
 <div class="container-fluid">
